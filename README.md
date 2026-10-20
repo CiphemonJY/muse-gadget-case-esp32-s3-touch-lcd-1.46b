@@ -53,7 +53,7 @@ Waveshare's drawing and 3D model:
 | 3 | **M2 x 6** countersunk screw (ISO 7046 / DIN 965) | Into the board's brass standoffs. |
 | 6 | **M2 x 8** countersunk screw (ISO 7046 / DIN 965) | 4 into the case posts, 2 into the trigger pivots (printed threads). |
 | 2 | Compression spring, **OD 5.0 mm, ID >= 3.3 mm, free length ~8 mm**, wire ~0.5 mm | Return springs for the two triggers (about 6.5 mm installed, around 1 N/mm). Common in spring assortment kits. |
-| 1 | Closed-cell foam, **1.0 mm thick**, adhesive-backed | Cut a ring **3.8 x 4.8 mm outside, 1.8 x 2.8 mm inside** for the microphone collar. |
+| 1 | Mic gasket (**optional, recommended**): either print `stl/tpu_mic_gasket.stl` in TPU 95A, or use **1.0 mm** adhesive-backed closed-cell foam | For foam, cut a ring **3.8 x 4.8 mm outside, 1.8 x 2.8 mm inside**. See [The microphone gasket](#the-microphone-gasket). |
 | ~60-70 ml | Tough / ABS-like resin | The parts are about 27 cm3; the rest is supports. |
 | 1 | USB-C cable | The opening is 12.8 x 7.4 mm, so very wide overmolds won't fit. |
 | opt. | M2 x 0.4 tap | Only to clean a printed thread if a screw binds. |
@@ -66,6 +66,7 @@ Waveshare's drawing and 3D model:
 | `stl/front_case.stl` | Main case (window, trigger bays, battery bay, threaded posts). Exported screen-face down. |
 | `stl/back_plate.stl` | Back plate (hooks, lip, mic collar, countersunk screw holes). Exported outer face down. |
 | `stl/trigger_pwr.stl`, `stl/trigger_boot.stl` | The two trigger levers. They are mirror pairs, not interchangeable. |
+| `stl/tpu_mic_gasket.stl` | Optional microphone gasket, to print in **TPU** (FDM). 3.8 x 4.8 x 0.75 mm. See below. |
 | `stl/fit_gauge_display_pocket.stl` | **Print this first**: the display end of the front case, full height. The board must drop in under its own weight and lift out without prying. |
 
 The STLs are in millimetres. Each part is one watertight body.
@@ -81,6 +82,35 @@ The STLs are in millimetres. Each part is one watertight body.
 3. Never put supports on the screen lip or the screen face.
 4. Tough / ABS-like resin, washed and **fully post-cured before you drive any screws**.
 
+## The microphone gasket
+
+The 1.46B's microphone is top-ported and faces the back plate. The case's mic port is a 1 mm hole
+in the back plate under a raised collar, with a **0.6 mm gap** between the collar top and the mic.
+
+**Is it needed?** Not for the mic to work. Without it, though, that gap is open all around the
+collar edge, about 9 mm2 into the case interior against the port's 0.8 mm2. The mic then mostly
+hears the air inside the case, which also holds the unsealed onboard speaker. Expect duller voice
+pickup and more speaker-to-mic echo. For a voice gadget, fit the gasket; if you skip it, test your
+wake word and echo first. (This is from the geometry, not a measured comparison.)
+
+**TPU version (`stl/tpu_mic_gasket.stl`).** A flat TPU ring the size of the collar would be far too
+stiff: squeezed 0.15 mm it would press about 70 N into the PCB at the mic. So the printed gasket is a
+**lip seal**:
+- a 0.2 mm base glued to the collar;
+- a 0.45 mm wall round the port that leans inward and **flexes** against the mic lid, about 5 N at
+  its 0.15 mm design squeeze;
+- its tip lands only on the mic's 3 x 4 mm lid, around the port.
+
+It is checked against the real collar and mic: it stays on the collar, the lip lands on the lid
+(a lip that doesn't lean fails that check), and it clears the nearest parts by 0.55 mm or more.
+
+Print it in **TPU 95A**:
+- 0.4 mm nozzle, **0.1 mm layers**, 100% infill;
+- flat on the bed, base down, exactly as exported;
+- slow (10-15 mm/s), with a few copies spaced apart so each layer has time to cool.
+
+If a copy comes out much taller than 0.75 mm, use another. Soft foam (1.0 mm closed-cell) works too.
+
 ## Assembly
 
 1. Front case face-down on a soft cloth, screen window down.
@@ -88,7 +118,9 @@ The STLs are in millimetres. Each part is one watertight body.
    drop each spring into its seat; the seats open toward the back, so the springs go in last.
 3. **Battery into its bay**, lead through the notch in the divider.
 4. **Board in**: display into the window, with the three brass standoffs pointing at you.
-5. **Gasket**: stick the foam ring onto the mic collar on the inside of the back plate.
+5. **Gasket (optional)**: put it on the mic collar on the inside of the back plate. For the TPU
+   part, place it **flat base down, lip up** and fix it with a tiny dot of flexible CA or contact
+   cement. Foam is self-adhesive.
 6. **Back plate on, 1.3 mm short of the top edge.** Lay it flat with its top edge 1.3 mm toward
    the bottom, lower it straight down, then **slide it toward the top edge** until it stops. The
    three hooks run over their ledges. Slide gently, because the gasket rides across the mic.
