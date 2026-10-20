@@ -118,12 +118,23 @@ If a copy comes out much taller than 0.75 mm, use another. Soft foam (1.0 mm clo
    drop each spring into its seat; the seats open toward the back, so the springs go in last.
 3. **Battery into its bay**, lead through the notch in the divider.
 4. **Board in**: display into the window, with the three brass standoffs pointing at you.
-5. **Gasket (optional)**: put it on the mic collar on the inside of the back plate. For the TPU
-   part, place it **flat base down, lip up** and fix it with a tiny dot of flexible CA or contact
-   cement. Foam is self-adhesive.
+5. **Gasket (optional)**: it goes on the raised rectangular collar round the mic hole, on the
+   inside of the back plate, before the plate goes on. Foam is self-adhesive: stick the ring on
+   with its outline matching the collar. For the TPU part:
+   - **Lip up.** The flat side goes on the collar and the thin leaning wall points up, toward the
+     mic. Upside down it does not seal.
+   - **It fits one way round.** The hole is off-centre (one wall 0.8 mm, the other 1.2 mm, like
+     the collar). Turn it until its outline sits exactly on the collar's, with nothing
+     overhanging and the holes lined up. If an edge overhangs, rotate it 180 deg.
+   - **Glue the base only**: a tiny dot of flexible CA or contact cement on the collar top, kept
+     away from the hole so nothing wicks into the port or onto the lip. Let it cure before
+     closing the case.
+   - If a printed copy is noticeably taller than 0.75 mm, use another one rather than forcing the
+     plate down.
 6. **Back plate on, 1.3 mm short of the top edge.** Lay it flat with its top edge 1.3 mm toward
    the bottom, lower it straight down, then **slide it toward the top edge** until it stops. The
-   three hooks run over their ledges. Slide gently, because the gasket rides across the mic.
+   three hooks run over their ledges. Slide gently: the gasket lip skims across the mic during
+   the slide. If it snags, lift the plate off and check the gasket hasn't peeled or flipped.
 7. **Screws, bottom first**, so the slide is locked:
    - 2 x M2x8 along the bottom edge;
    - 2 x M2x8 at the top corners;
@@ -132,6 +143,12 @@ If a copy comes out much taller than 0.75 mm, use another. Soft foam (1.0 mm clo
 
    Start each screw **by hand**: turn it backward until you feel it drop into the printed thread,
    then forward. Stop at snug. If one binds, run an M2 tap through once instead of forcing it.
+
+### Checking the gasket
+
+Record a few words with the gasket fitted and without it, ideally while audio plays through the
+speaker. If the gasket version is clearer with less echo, it is sealing. If both sound the same,
+check it is lip-up and seated, or skip it.
 
 ## Status and what is checked
 
